@@ -1,4 +1,4 @@
-const TARGET_REACH = 100;
+const TARGET_REACH = 1000;
 
 function parseReachNumber(text) {
   text = text.trim().toUpperCase();
@@ -40,13 +40,13 @@ window._scrollInterval = setInterval(() => {
     }
   }
 
-  window.scrollBy({ top: 600, behavior: 'smooth' });
+  window.scrollBy({ top: 1500, behavior: 'smooth' });
 
   const isBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 100;
   if (isBottom) {
     clearInterval(window._scrollInterval);
     console.log('🏁 Đã hết trang, không còn bài nào reach >', TARGET_REACH);
   }
-}, 1200);
+}, 1000);
 
 console.log('🚀 Đang tìm bài tiếp theo có reach >', TARGET_REACH);
